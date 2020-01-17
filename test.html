@@ -12,7 +12,9 @@
 			alert("id: test 3333333" );
 		}
 		
-
+		function back() {
+			window.webkit.messageHandlers.back.postMessage();
+		}
 		$(document).ready(function(){
 
 		  // $("#test").click(function(){
@@ -55,7 +57,7 @@
 
 	<div style="justify-content: center;display: grid;">
 		<button id="test">Click Me!</button>
-		<button id="123">点本我</button>
+		<button id="back">返回</button>
 		<button id="btn1">显示文本显示文本显示文本显示文本显示文本</button>
 		<button id="btn2">显示文本显示文本显示文本显示文本显示文本</button>
 		<button id="btn3">显示文本显示文本显示文本显示文本显示文本</button>
