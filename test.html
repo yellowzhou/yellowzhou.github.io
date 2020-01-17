@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>测试页面</title>
+	<meta name="viewport" id="viewport" content="width=device-width,maximum-scale=3.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		function test() {
+			alert("id: test 3333333" );
+		}
+		
+
+		$(document).ready(function(){
+
+		  // $("#test").click(function(){
+		  // });
+		  	var nodes = document.getElementsByTagName('button');
+			for (var i = 0; i < nodes.length; i++) {
+				(function(i) {
+					var id = nodes[i].id;
+					nodes[i].onclick = function()
+					{
+						try {
+							window[id]();
+						} catch (error) {
+							alert("没有找到 function " + id + "() { ... } 函数");
+						}
+						
+					}
+				})(i);
+			}
+		});
+	</script>
+	<style type="text/css">
+
+		button {
+			border-width: 3;
+		    max-width: 200px;
+		    min-height: 50px;
+		    color: #FFEB3B;
+		    margin: 10;
+		    background: gray;
+		    border: 2px solid #a1a1a1;
+		    border-radius: 25px;
+		    font-size: 20;
+		}
+
+	</style>
+</head>
+<body>
+	<h1  align="center">H5 交互测试</h1>
+
+	<div style="justify-content: center;display: grid;">
+		<button id="test">Click Me!</button>
+		<button id="123">点本我</button>
+		<button id="btn1">显示文本显示文本显示文本显示文本显示文本</button>
+		<button id="btn2">显示文本显示文本显示文本显示文本显示文本</button>
+		<button id="btn3">显示文本显示文本显示文本显示文本显示文本</button>
+		<button id="btn4">显示文本显示文本显示文本显示文本显示文本</button>
+	</div>
+	
+
+
+</body>
+</html>
