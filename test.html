@@ -11,12 +11,91 @@
 		function test() {
 			alert("id: test 3333333" );
 		}
-		
+
+
+		function goback() {
+			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goback && window.webkit.messageHandlers.goback.postMessage(null);
+		}
+
+		function closeWindow() {
+			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWindow && window.webkit.messageHandlers.closeWindow.postMessage(null);
+		}
+
+		function openNewWindow() {
+			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openNewWindow && window.webkit.messageHandlers.openNewWindow.postMessage(window.location.href);
+		}
+
+		function openNewWindow2() {
+			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openNewWindow && window.webkit.messageHandlers.openNewWindow.postMessage('https://www.baidu.com');
+		}
+
+		function addLocalStorage() {
+
+			var data = prompt("localStorage account 信息","yellow");
+			if (data != null) {
+				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.saveLocalStorage && window.webkit.messageHandlers.saveLocalStorage.postMessage({account:data,token:"----- "+data+" -----"});
+			}
+			
+		}
+
+		function share() 
+		{
+			var title = "微信分享";
+			var content = "1234567";
+			var url = 'https://www.baidu.com';
+			var callback = "shareResult";
+
+			var info = {title:title,content:content,url:url,callback:callback};
+			if (window.webview != null) {
+				window.webview.share(JSON.stringify(info));
+			} else {
+				 window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.share && window.webkit.messageHandlers.share.postMessage(JSON.stringify(info));
+			}
+
+		}
+
+		function shareResult(r)
+		{
+			var d = JSON.parse(r);
+			if (d.code == 1) {
+				alert('分享结果：' + d.app + ' 成功');
+			} else {
+				alert('分享结果：' + d.app + ' 失败');
+			}
+			
+		}
+
+		function getToken() 
+		{
+			var info = {callback:"fetchToken"};
+			if (window.webview != null) {
+				window.webview.getToken(JSON.stringify(info));
+			} else {
+				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.getToken && window.webkit.messageHandlers.getToken.postMessage(JSON.stringify(info));
+			}
+
+		}
+
+		function fetchToken(r) 
+		{
+			alert('用户信息：' + r + ' 成功');
+		}
+
+		function logout() 
+		{
+			if (window.webview != null) {
+				window.webview.logout();
+			} else {
+				 window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.logout && window.webkit.messageHandlers.logout.postMessage(null);
+			}
+		}
+
 
 		$(document).ready(function(){
+			document.getElementById('datetime').innerHTML = new Date().toLocaleString();
+			document.getElementById('currenttime').innerHTML = new Date().toLocaleString();
+			setInterval("document.getElementById('currenttime').innerHTML=new Date().toLocaleString();", 1000);
 
-		  // $("#test").click(function(){
-		  // });
 		  	var nodes = document.getElementsByTagName('button');
 			for (var i = 0; i < nodes.length; i++) {
 				(function(i) {
@@ -33,6 +112,8 @@
 				})(i);
 			}
 		});
+
+		
 	</script>
 	<style type="text/css">
 
@@ -51,17 +132,42 @@
 	</style>
 </head>
 <body>
-	<h1  align="center">H5 交互测试</h1>
+	<div align="center">
+		<h1  >H5 交互测试</h1>
+		<div style="display: flex;">
+			<h3 id="datetime" ></h3>
+			<h3 id="currenttime" style="color: lightgray;"></h3>
+		</div>
+		
+		<div style="display: flex;">
+			<h2>用户信息：</h2>
+			<h2 id="token">
+			<script >
+				document.getElementById('token').innerHTML = localStorage.getItem("account");;
+			</script>
+		</h2>
+		</div>
+	</div>
+	
+	
 
 	<div style="justify-content: center;display: grid;">
 		<button id="test">Click Me!</button>
-		<button id="123">点本我</button>
-		<button id="btn1">显示文本显示文本显示文本显示文本显示文本</button>
-		<button id="btn2">显示文本显示文本显示文本显示文本显示文本</button>
-		<button id="btn3">显示文本显示文本显示文本显示文本显示文本</button>
-		<button id="btn4">显示文本显示文本显示文本显示文本显示文本</button>
+		<button id="goback">返回</button>
+		<button id="closeWindow">退出窗口</button>
+		<button id="openNewWindow">打开新的窗口</button>
+		<button id="openNewWindow2">百度一下</button>
+		<button id="addLocalStorage">写数据</button>
+		<button id="share">分享</button>
+		<button id="getToken">获取用户信息</button>
+		<button id="logout">退出登录</button>
+		<a href="test.html"> test.html </a>
 	</div>
 	
+
+	<div style="height: 300px">
+		
+	</div>
 
 
 </body>
