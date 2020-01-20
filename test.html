@@ -14,29 +14,50 @@
 
 
 		function goback() {
-			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goback && window.webkit.messageHandlers.goback.postMessage(null);
-		}
-
-		function closeWindow() {
-			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWindow && window.webkit.messageHandlers.closeWindow.postMessage(null);
-		}
-
-		function openNewWindow() {
-			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openNewWindow && window.webkit.messageHandlers.openNewWindow.postMessage(window.location.href);
-		}
-
-		function openNewWindow2() {
-			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openNewWindow && window.webkit.messageHandlers.openNewWindow.postMessage('https://www.baidu.com');
-		}
-
-		function addLocalStorage() {
-
-			var data = prompt("localStorage account 信息","yellow");
-			if (data != null) {
-				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.saveLocalStorage && window.webkit.messageHandlers.saveLocalStorage.postMessage({account:data,token:"----- "+data+" -----"});
+			if (window.webview != null) {
+				window.webview.goback();
+			} else {
+				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goback && window.webkit.messageHandlers.goback.postMessage(null);
 			}
 			
 		}
+
+		function closeWindow() {
+			if (window.webview != null) {
+				window.webview.closeWindow();
+			} else {
+				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWindow && window.webkit.messageHandlers.closeWindow.postMessage(null);
+			}
+		}
+
+		function openNewWindow() {
+			if (window.webview != null) {
+				window.webview.openNewWindow(window.location.href);
+			} else {
+				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openNewWindow && window.webkit.messageHandlers.openNewWindow.postMessage(window.location.href);
+			}
+		}
+
+		function openNewWindow2() {
+			if (window.webview != null) {
+				window.webview.openNewWindow('https://www.baidu.com');
+			} else {
+				window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openNewWindow && window.webkit.messageHandlers.openNewWindow.postMessage('https://www.baidu.com');
+			}
+		}
+
+		// function addLocalStorage() {
+
+		// 	var data = prompt("localStorage account 信息","yellow");
+		// 	if (window.webview != null) {
+
+		// 	} else {
+		// 		if (data != null) {
+		// 			window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.saveLocalStorage && window.webkit.messageHandlers.saveLocalStorage.postMessage({account:data,token:"----- "+data+" -----"});
+		// 		}
+		// 	}
+			
+		// }
 
 		function share() 
 		{
@@ -157,7 +178,7 @@
 		<button id="closeWindow">退出窗口</button>
 		<button id="openNewWindow">打开新的窗口</button>
 		<button id="openNewWindow2">百度一下</button>
-		<button id="addLocalStorage">写数据</button>
+		<!-- <button id="addLocalStorage">写数据</button> -->
 		<button id="share">分享</button>
 		<button id="getToken">获取用户信息</button>
 		<button id="logout">退出登录</button>
