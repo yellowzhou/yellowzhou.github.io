@@ -115,12 +115,12 @@
 		function viewWillAppear()
 		{
 			document.getElementById('refreshlabel').innerHTML = ++refreshNumber;
-			alert('即将显示该页面，可以进行刷新操作');
+			console.log('即将显示该页面，可以进行刷新操作');
 		}
 
 		function viewWillDisappear()
 		{
-			alert('即将隐藏该页面，保存数据操作');
+			console.log('即将隐藏该页面，保存数据操作');
 		}
 
 		$(document).ready(function(){
