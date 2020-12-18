@@ -1,0 +1,10 @@
+<div class="dark-social">
+    <h3>社交账号</h3>
+    <div>
+        <% for (name in theme.social) { %>
+        <a class="dark-social-accounts" href="<%- url_for(theme.social[name][0]) %>">
+            <span class="<%- theme.social[name][1] %>"></span>
+        </a>
+        <% } %>
+    </div>
+</div>

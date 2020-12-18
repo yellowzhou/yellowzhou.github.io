@@ -1,0 +1,25 @@
+<div class="dark-nav">
+    <div class="dark-about-author">
+        <div class="dark-avatar">
+            <img src="<%= theme.avatar %>" alt="<%= config.author || config.title %>" alt="<%= config.author || config.title %>">
+            <div class="dark-authorname"><%= config.author %></div>
+            <div class="dark-subtitle"><%= config.subtitle %></div>
+        </div>
+        <div class="dark-count">
+            <span style="color: white;"><%= __('文章') %><%= site.posts.length %></span>
+            <span style="color: white;"><%= __('标签') %><%= site.tags.length %></span>
+            <span style="color: white;"><%= __('分类') %><%= site.categories.length %></span>
+        </div>
+       
+    </div> 
+    <div class="dark-nav-list" >
+        <% for (name in theme.menu) { %>
+        <a class="dark-nav-list-url" href="<%- url_for(theme.menu[name][0]) -%>" ><span class="<%- theme.menu[name][1] %>"></span><%= name %></a>
+        <% } %>
+    </div>
+    <div class="dark-sidebar">
+        <% theme.widgets.forEach(function(widget){ %>
+            <%- partial('_widget/' + widget) %>
+        <% }) %>
+    </div>
+</div>
