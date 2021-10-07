@@ -3,8 +3,8 @@
 
    $(document).ready(function() {
     //通过Android方法来获取参数map,转成json对象获取参数
-   	var mapJson=android.stringToHtml();
-   	var map=JSON.parse(mapJson);
+   	// var mapJson=android.stringToHtml();
+   	// var map=JSON.parse(mapJson);
    	function ajax_data() {
    	                //这里先用死数据进行测试，网络请求可以使用下面的ajax
 					var dataArr = [400,-500,300,200,400,-500,300,200,400,-500,300,200,400,-500,300,200,
