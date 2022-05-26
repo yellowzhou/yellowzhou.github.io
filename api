@@ -1,0 +1,139 @@
+{
+  "errcode": 200,
+  "errmsg": "",
+  "list": [
+    {
+      "groupavater": "https://yellowzhou.github.io/11.png",
+      "cover": "https://yellowzhou.github.io/11.png",
+      "like_cnt": 9732,
+      "publish_date": "2022-11-12",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申",
+      "content_url": "http://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-720p.mp4",
+      "groupname": "公积金",
+      "is_like": true,
+      "is_fav": true,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/0.jpeg",
+      "cover": "https://yellowzhou.github.io/0.jpeg",
+      "like_cnt": 7472,
+      "publish_date": "2022-12-11",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/nike.mp4",
+      "groupname": "nike",
+      "is_like": false,
+      "is_fav": false,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/1.jpeg",
+      "cover": "https://yellowzhou.github.io/1.jpeg",
+      "like_cnt": 9732,
+      "publish_date": "2022-12-12",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/super.mp4",
+      "groupname": "super",
+      "is_like": true,
+      "is_fav": true,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/2.jpeg",
+      "cover": "https://yellowzhou.github.io/2.jpeg",
+      "like_cnt": 6815,
+      "publish_date": "2022-12-13",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/兔子.mp4",
+      "groupname": "兔子",
+      "is_like": true,
+      "is_fav": true,
+      "is_sub": true
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/3.jpeg",
+      "cover": "https://yellowzhou.github.io/3.jpeg",
+      "like_cnt": 3178,
+      "publish_date": "2022-12-14",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金支持在线提取申请！最",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/喷泉.mp4",
+      "groupname": "喷泉",
+      "is_like": true,
+      "is_fav": true,
+      "is_sub": true
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/4.jpeg",
+      "cover": "https://yellowzhou.github.io/4.jpeg",
+      "like_cnt": 6526,
+      "publish_date": "2022-12-15",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金支持在线提取申请！最快3个工作日办",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/桃花.mp4",
+      "groupname": "桃花",
+      "is_like": false,
+      "is_fav": true,
+      "is_sub": true
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/5.jpeg",
+      "cover": "https://yellowzhou.github.io/5.jpeg",
+      "like_cnt": 5280,
+      "publish_date": "2022-12-16",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/特效.mp4",
+      "groupname": "特效",
+      "is_like": false,
+      "is_fav": false,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/6.jpeg",
+      "cover": "https://yellowzhou.github.io/6.jpeg",
+      "like_cnt": 2643,
+      "publish_date": "2022-12-17",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/狗.mp4",
+      "groupname": "狗",
+      "is_like": false,
+      "index": 6,
+      "is_fav": true,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/7.jpeg",
+      "cover": "https://yellowzhou.github.io/7.jpeg",
+      "like_cnt": 7629,
+      "publish_date": "2022-12-18",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/猫.mp4",
+      "groupname": "猫",
+      "is_like": true,
+      "is_fav": true,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/8.jpeg",
+      "cover": "https://yellowzhou.github.io/8.jpeg",
+      "like_cnt": 7132,
+      "publish_date": "2022-12-19",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！重磅！广州公积金支持在线提取申请！最快3个工作日办结",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/翻跟斗.mp4",
+      "groupname": "翻跟斗",
+      "is_like": true,
+      "is_fav": true,
+      "is_sub": false
+    },
+    {
+      "groupavater": "https://yellowzhou.github.io/9.jpeg",
+      "cover": "https://yellowzhou.github.io/9.jpeg",
+      "like_cnt": 9655,
+      "publish_date": "2022-12-110",
+      "excerpt": "重磅！广州公积金支持在线提取申请！最快3个工作日办结！快来申请提取吧！",
+      "content_url": "http://demo-videos.qnsdk.com/shortvideo/迪斯尼.mp4",
+      "groupname": "迪斯尼",
+      "is_like": false,
+      "is_fav": true,
+      "is_sub": true
+    }
+  ]
+}
